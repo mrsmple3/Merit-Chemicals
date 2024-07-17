@@ -1,6 +1,12 @@
 (function ($) {
 	$(function () {
-		gsap.registerPlugin(ScrollTrigger, ScrollSmoother, TextPlugin, Flip);
+		gsap.registerPlugin(
+			ScrollTrigger,
+			ScrollSmoother,
+			TextPlugin,
+			Flip,
+			Observer
+		);
 
 		function size(px) {
 			const conversionFactor = 23;
@@ -20,19 +26,35 @@
 		//!Header
 
 		//Sticky
+		const $header = $('.header');
 		const $headerSticky = $('.header_sticky');
+		const $headerTop = $('header .top');
+		const $headerTopHeight = $('header .top').outerHeight();
+		console.log($headerTop.outerHeight());
 		const headerOffsetTop = $headerSticky.offset().top;
 
-		function handleScroll() {
+		function handleScroll($top) {
 			const scrollTop = $(window).scrollTop();
 			if (scrollTop >= headerOffsetTop) {
-				$headerSticky.addClass('fixed');
+				$header.css('top', `-${$headerTopHeight}px`);
+				$header.css('top', $top);
 			} else {
-				$headerSticky.removeClass('fixed');
+				$header.css('top', '0');
 			}
 		}
 
 		$(window).on('scroll', handleScroll);
+
+		Observer.create({
+			target: window,
+			type: 'wheel,touch,scroll,pointer',
+			onUp: () => {
+				handleScroll('0');
+			},
+			onDown: () => {
+				handleScroll(`-${$headerTopHeight}px`);
+			},
+		});
 
 		//navbar hover
 		const $submenuLink = $('.navbar-link.submenu-link');
