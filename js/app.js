@@ -180,6 +180,12 @@
 			container_big_search.find('input.search').focus();
 		});
 
+		$('.form-search .icon-search').click(function () {
+			$(this).closest('.form-search').addClass('noactive');
+			container_big_search.addClass('active');
+			container_big_search.find('input.search').focus();
+		});
+
 		function noactivateSearch(container_big_search) {
 			$('.form-search').removeClass('noactive');
 			container_big_search.removeClass('active');
@@ -302,6 +308,18 @@
 				scrub: true,
 			},
 		});
+
+		//!Main-slider
+		// function changeVideoSource(newSource) {
+		// 	var video = $('#mainVideo');
+		// 	var source = video.find('source');
+
+		// 	source.attr('src', newSource);
+		// 	video[0].load(); // Перезагрузить видео с новым источником
+		// }
+
+		// // Пример использования функции для изменения видео
+		// changeVideoSource('/img/fon-mainSlider-1.mp4');
 
 		//! Функция для установки класса active на соответствующий .icon-marker
 		// const tlMap = gsap.timeline({

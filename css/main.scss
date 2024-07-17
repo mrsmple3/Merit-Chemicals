@@ -69,7 +69,6 @@ textarea {
 	outline: none;
 }
 think {
-	display: block;
 	color: rgba(255, 255, 255, 0.7);
 }
 .flex-center {
@@ -184,14 +183,18 @@ think {
 		align-items: flex-start;
 		justify-content: flex-start;
 		transition: all 0.5s;
+		@media screen and (max-width: 768px) {
+		}
 		.linear-header {
 			position: absolute;
 			width: 100%;
-			height: calc(100% - size(46px));
+			height: calc(100% - size(38px));
 			inset: 0;
 			background: linear-gradient(180deg, #030f29 0%, rgba(1, 13, 42, 0) 100%);
-			// background: #010d2a;
 			z-index: -1;
+			@media screen and (max-width: 768px) {
+				border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
+			}
 		}
 		.content-menu {
 			width: 100%;
@@ -205,12 +208,16 @@ think {
 				align-items: end;
 				gap: size(12px);
 				.logo-title {
-					width: size(48px);
+					width: size(150px);
 					height: size(49px);
+					@media screen and (max-width: 768px) {
+						width: 150px;
+						height: 49px;
+					}
 				}
 				.logo-img {
-					width: size(88.89px);
-					height: size(37.96px);
+					width: 88.89px;
+					height: 37.96px;
 				}
 			}
 			.navbar {
@@ -356,6 +363,9 @@ think {
 					font-weight: 500;
 					word-wrap: break-word;
 					transition: all 0.15s;
+					@media screen and (max-width: 768px) {
+						display: none;
+					}
 					&::placeholder {
 						color: rgba(255, 255, 255, 0.8);
 					}
@@ -370,14 +380,17 @@ think {
 				}
 				img.icon-search {
 					pointer-events: none;
+					@media screen and (max-width: 768px) {
+						pointer-events: all;
+					}
 				}
 				img.icon-search,
 				img.icon-search-close {
-					width: size(20px);
-					height: size(20px);
+					width: 20px;
+					height: 20px;
 					position: absolute;
 					top: 50%;
-					right: size(16px);
+					right: 16px;
 					transform: translateY(-50%);
 				}
 				img.icon-search-close {
@@ -407,7 +420,7 @@ think {
 			}
 			input.search {
 				width: 100%;
-				height: size(46px);
+				height: 46px;
 				outline: none;
 				border-radius: size(100px);
 				border: size(1px) rgba(255, 255, 255, 0.7) solid;
@@ -415,7 +428,7 @@ think {
 				padding-left: size(21px);
 				background-color: transparent;
 				color: rgba(255, 255, 255, 0.8);
-				font-size: size(14px);
+				font-size: 14px;
 				font-weight: 500;
 				word-wrap: break-word;
 				opacity: 0;
@@ -433,8 +446,8 @@ think {
 				}
 			}
 			img.icon-search-close {
-				width: size(20px);
-				height: size(20px);
+				width: 20px;
+				height: 20px;
 				position: absolute;
 				top: 50%;
 				right: size(16px);
@@ -442,6 +455,12 @@ think {
 				cursor: pointer;
 				opacity: 0;
 				transition: all 0.3s;
+			}
+		}
+		.btn-mobilemenu {
+			cursor: pointer;
+			@media screen and (min-width: 768px) {
+				display: none;
 			}
 		}
 	}
@@ -457,7 +476,7 @@ main.main-block {
 	z-index: 3;
 	@media screen and (max-width: 768px) {
 	}
-	.swiper {
+	.swiper.container-fon-mainPage {
 		overflow: visible;
 		position: absolute;
 		width: 100vw;
@@ -465,6 +484,12 @@ main.main-block {
 		z-index: 0;
 		.swiper-wrapper {
 			height: 100%;
+		}
+		video {
+			height: 100vh;
+			max-height: 100vh;
+			width: 100%;
+			object-fit: cover;
 		}
 	}
 	.fon-mainPage {
@@ -493,8 +518,21 @@ main.main-block {
 			align-items: flex-start;
 			padding-bottom: size(220px);
 		}
+		.offer-title.swiper {
+			margin: 0;
+			padding: 0;
+			.swiper-wrapper {
+				max-width: size(560px);
+			}
+		}
+		.offer-sub {
+			margin: 0;
+			padding: 0;
+			.swiper-wrapper {
+				max-width: size(450px);
+			}
+		}
 		.container-title {
-			// max-width: size(575px);
 			display: flex;
 			flex-direction: column;
 			gap: size(16px);
@@ -566,14 +604,13 @@ main.main-block {
 					gap: 0;
 				}
 				.sub {
-					// max-width: size(450px);
 					color: rgba(255, 255, 255, 0.8);
 					font-size: size(18px);
 					font-weight: 400;
 					line-height: size(27.18px);
 					word-wrap: break-word;
 					strong {
-						display: block;
+						// display: block;
 					}
 					@media screen and (max-width: 768px) {
 						font-size: 17px;
@@ -1701,7 +1738,6 @@ main.main-block {
 			gap: size(13px);
 			margin-bottom: size(30px);
 			.img-footer-logo {
-				width: size(48.15px);
 				height: size(49.07px);
 			}
 			.img-footer-logo-title {

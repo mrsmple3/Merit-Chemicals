@@ -36,6 +36,27 @@ const swiperOffer = new Swiper('.swiper.container-fon-mainPage', {
 	// },
 });
 
+const swiperTitleOffer = new Swiper('.swiper.offer-title', {
+	// simulateTouch: adaptLoop,
+	slidesPerView: 1,
+	initialSlide: 0,
+	autoHeight: true,
+	loop: true,
+});
+
+const swiperSubOffer = new Swiper('.swiper.offer-sub', {
+	// simulateTouch: adaptLoop,
+	slidesPerView: 1,
+	initialSlide: 0,
+	autoHeight: true,
+	loop: true,
+});
+
+swiperTitleOffer.controller.control = swiperOffer;
+swiperSubOffer.controller.control = swiperOffer;
+
+swiperOffer.controller.control = [swiperTitleOffer, swiperSubOffer];
+
 const partnerSlider = new Swiper('.swiper.slider-partenrs', {
 	navigation: {
 		nextEl: '.swiper-partner-next',

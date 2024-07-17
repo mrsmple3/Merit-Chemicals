@@ -122,10 +122,6 @@
 							src="/img/Logo.svg"
 							alt="Merit Chemicals"
 							class="logo-title" />
-						<img
-							src="/img/Logo_title.svg"
-							alt="Merit Chemicals"
-							class="logo-img" />
 					</a>
 					<nav class="navbar">
 						<a
@@ -285,19 +281,24 @@
 							>Контакты</a
 						>
 					</nav>
-					<form
-						action=""
-						method="post"
-						class="form-search">
-						<input
-							type="text"
-							class="search"
-							placeholder="Поиск" />
+					<div class="flex-center">
+						<form
+							action=""
+							method="post"
+							class="form-search">
+							<input
+								type="text"
+								class="search"
+								placeholder="Поиск" />
+							<img
+								src="/icons/search.svg"
+								alt="search-icon"
+								class="icon-search" />
+						</form>
 						<img
-							src="/icons/search.svg"
-							alt="search-icon"
-							class="icon-search" />
-					</form>
+							src="/icons/btn-mobilemenu.svg"
+							class="btn-mobilemenu" />
+					</div>
 				</div>
 				<div class="form-big-search">
 					<form>
@@ -318,33 +319,70 @@
 				<main class="main-block">
 					<div class="swiper container-fon-mainPage">
 						<div class="swiper-wrapper">
+							<video
+								id="fon-mainSlider-1"
+								class="swiper-slide"
+								autoplay
+								muted
+								loop>
+								<source
+									src="/img/fon-mainSlider-1.mp4"
+									type="video/mp4" />
+								Your browser does not support the video tag.
+							</video>
 							<img
-								src="/img/fon_mainPage.png"
+								src="/img/fon-mainSlider-2.jpg"
 								alt="fon_img"
 								class="swiper-slide fon-mainPage" />
 							<img
-								src="/img/fon_mainPage.png"
-								alt="fon_img"
-								class="swiper-slide fon-mainPage" />
-							<img
-								src="/img/fon_mainPage.png"
+								src="/img/fon-mainSlider-3.jpg"
 								alt="fon_img"
 								class="swiper-slide fon-mainPage" />
 						</div>
 					</div>
 					<div class="offer">
-						<div class="container-title">
-							<div class="flex-center">
-								<img
-									src="/icons/bublick.svg"
-									alt="o"
-									class="note" />
-								<span>Широкий ассортимент продукции</span>
+						<div class="offer-title swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide container-title">
+									<div class="flex-center">
+										<img
+											src="/icons/bublick.svg"
+											alt="o"
+											class="note" />
+										<span>Широкий ассортимент продукции</span>
+									</div>
+									<h1 class="title">
+										Ведущий поставщик <think>химического сырья</think> в
+										Узбекистане и ЦА
+									</h1>
+								</div>
+								<div class="swiper-slide container-title">
+									<div class="flex-center">
+										<img
+											src="/icons/bublick.svg"
+											alt="o"
+											class="note" />
+										<span>Логистика</span>
+									</div>
+									<h1 class="title">
+										Осуществляем прямые
+										<think>поставки химического</think>
+										сырья
+									</h1>
+								</div>
+								<div class="swiper-slide container-title">
+									<div class="flex-center">
+										<img
+											src="/icons/bublick.svg"
+											alt="o"
+											class="note" />
+										<span>Лаборатория</span>
+									</div>
+									<h1 class="title">
+										Лаборатория <think>Merit Chemicals</think>
+									</h1>
+								</div>
 							</div>
-							<h1 class="title">
-								Ведущий поставщик <think>химического сырья</think> в Узбекистане
-								и ЦА
-							</h1>
 						</div>
 						<div class="container-sub">
 							<div class="slider-btns">
@@ -361,19 +399,54 @@
 										class="slider-offer-btn" />
 								</div>
 							</div>
-							<div class="flex-center">
-								<div
-									style="
-										width: 0;
-										height: 72px;
-										transform-origin: 0 0;
-										border: 1px rgba(255, 255, 255, 0.5) solid;
-									" class="line"></div>
-								<p class="sub">
-									Ваш надежный партнер в химической индустрии,
-									<strong>предоставляющий качественные решения</strong> и
-									инновационные продукты
-								</p>
+							<div class="offer-sub swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide flex-center">
+										<div
+											style="
+												width: 0;
+												height: 72px;
+												transform-origin: 0 0;
+												border: 1px rgba(255, 255, 255, 0.5) solid;
+											"
+											class="line"></div>
+										<p class="sub">
+											Ваш надежный партнер в химической индустрии,
+											<strong>предоставляющий качественные решения</strong> и
+											инновационные продукты
+										</p>
+									</div>
+									<div class="swiper-slide flex-center">
+										<div
+											style="
+												width: 0;
+												height: 72px;
+												transform-origin: 0 0;
+												border: 1px rgba(255, 255, 255, 0.5) solid;
+											"
+											class="line"></div>
+										<p class="sub">
+											Поставки любым транспортом и логистическими путями.
+											<strong>Предоставляем складские помещения</strong>
+											оказываем услуги хранения.
+										</p>
+									</div>
+									<div class="swiper-slide flex-center">
+										<div
+											style="
+												width: 0;
+												height: 72px;
+												transform-origin: 0 0;
+												border: 1px rgba(255, 255, 255, 0.5) solid;
+											"
+											class="line"></div>
+										<p class="sub">
+											Вся представленная продукция соответствует
+											<strong>самым высоким стандартам качества</strong> и и
+											проходит строгий контроль.
+										</p>
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="swiper-pagination"></div>
@@ -474,7 +547,6 @@
 						color: brown;
 						width: 200px;
 					"></div>
-
 				<div
 					id="about"
 					class="container-about">
@@ -1386,10 +1458,6 @@
 								src="/img/Logo.svg"
 								alt=""
 								class="img-footer-logo" />
-							<img
-								src="/img/Logo_title.svg"
-								alt=""
-								class="img-footer-logo-title" />
 						</a>
 						<div class="bottom-footer">
 							<span class="title-bottom"
