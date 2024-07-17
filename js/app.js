@@ -24,7 +24,6 @@
 		}
 
 		//!Header
-
 		//Sticky
 		const $header = $('.header');
 		const $headerSticky = $('.header_sticky');
@@ -43,18 +42,20 @@
 			}
 		}
 
-		$(window).on('scroll', handleScroll);
+		if (ScrollTrigger.isTouch !== 1) {
+			$(window).on('scroll', handleScroll);
 
-		Observer.create({
-			target: window,
-			type: 'wheel,touch,scroll,pointer',
-			onUp: () => {
-				handleScroll('0');
-			},
-			onDown: () => {
-				handleScroll(`-${$headerTopHeight}px`);
-			},
-		});
+			Observer.create({
+				target: window,
+				type: 'wheel,touch,scroll,pointer',
+				onUp: () => {
+					handleScroll('0');
+				},
+				onDown: () => {
+					handleScroll(`-${$headerTopHeight}px`);
+				},
+			});
+		}
 
 		//navbar hover
 		const $submenuLink = $('.navbar-link.submenu-link');
