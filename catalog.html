@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Merit Chemicals</title>
+
+    <!-- css -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/css/intlTelInput.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/contacts.css" />
+
+    <!-- script -->
+    <script src="/js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+    <script src="libs/gsap/gsap.min.js"></script>
+    <script src="libs/gsap/ScrollTrigger.min.js"></script>
+    <script src="libs/gsap/ScrollSmoother.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Observer.min.js"></script>
+
+    <script src="/js/intlTelInput.js"></script>
+    <script src="/js/intlTelInput.min.js"></script>
+    <script src="/js/utils.js"></script>
+
+    <script src="js/slider.js" defer></script>
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="top">
+            <h4 class="company_name">Merit Chemicals</h4>
+            <a href="tel:+99871203-00-55" class="phone_number">+998 (71) 203-00-55</a>
+            <a href="mailto:info@meritkimyo.uz" class="mail">info@meritkimyo.uz</a>
+            <address>г. Ташкент, Шайхонтохурский район, ул. Фурката, 6A.</address>
+            <ul class="social-media">
+                <a href="">
+                    <img src="/icons/social-media/header/1.svg" alt="instagram" class="i-socmedia" />
+                </a>
+                <a href="">
+                    <img src="/icons/social-media/header/2.svg" alt="youtube" class="i-socmedia" />
+                </a>
+                <a href="">
+                    <img src="/icons/social-media/header/3.svg" alt="linkedIn" class="i-socmedia" />
+                </a>
+                <a href="">
+                    <img src="/icons/social-media/header/4.svg" alt="facebook" class="i-socmedia" />
+                </a>
+                <a href="">
+                    <img src="/icons/social-media/header/5.svg" alt="telegram" class="i-socmedia" />
+                </a>
+            </ul>
+            <ul class="languages">
+                <a href=""><img src="/icons/langugaes/1.svg" alt="UZ" class="i-lang" /></a>
+                <a href=""><img src="/icons/langugaes/2.svg" alt="RU" class="i-lang" /></a>
+                <a href=""><img src="/icons/langugaes/3.svg" alt="US" class="i-lang" /></a>
+            </ul>
+        </div>
+        <menu class="header_sticky menu">
+            <div class="linear-header"></div>
+            <div class="content-menu">
+                <a class="logo">
+                    <img src="/img/Logo.svg" alt="Merit Chemicals" class="logo-title" />
+                    <img src="/img/Logo_title.svg" alt="Merit Chemicals" class="logo-img" />
+                </a>
+                <nav class="navbar">
+                    <a href="" class="navbar-link">Компания</a>
+                    <a href="" class="navbar-link submenu-link">
+                        <span>Продукция</span>
+                        <img src="/icons/triangel-gray.svg" class="triangel" />
+                    </a>
+                    <div class="container-submenu">
+                        <ul class="submenu">
+                            <li class="container-navbar-submenu-title" data-category="Общая химия">
+                                <!-- Нужно чтобы data-category должно быть одинкавым с submenu-categories -->
+                                <span>Общая химия</span>
+                                <img src="icons/submenu.svg" alt="" class="navbar-submenu-icon" />
+                            </li>
+                            <li class="container-navbar-submenu-title" data-category="">
+                                <!-- Нужно чтобы data-category должно быть одинкавым с submenu-categories -->
+                                <span>Строительная химия</span>
+                                <img src="icons/submenu.svg" alt="" class="navbar-submenu-icon" />
+                            </li>
+                            <li class="container-navbar-submenu-title" data-category="">
+                                <!-- Нужно чтобы data-category должно быть одинкавым с submenu-categories -->
+                                <span>Бытовая химия и косметика</span>
+                                <img src="icons/submenu.svg" alt="" class="navbar-submenu-icon" />
+                            </li>
+                            <li class="container-navbar-submenu-title" data-category="">
+                                <!-- Нужно чтобы data-category должно быть одинкавым с submenu-categories -->
+                                <span>Полимерная химия</span>
+                                <img src="icons/submenu.svg" alt="" class="navbar-submenu-icon" />
+                            </li>
+                            <li class="container-navbar-submenu-title" data-category="">
+                                <!-- Нужно чтобы data-category должно быть одинкавым с submenu-categories -->
+                                <span>Текстильная химия</span>
+                                <img src="icons/submenu.svg" alt="" class="navbar-submenu-icon" />
+                            </li>
+                            <li class="container-navbar-submenu-title" data-category="">
+                                <!-- Нужно чтобы data-category должно быть одинкавым с submenu-categories -->
+                                <span>Пыщевая химия</span>
+                                <img src="icons/submenu.svg" alt="" class="navbar-submenu-icon" />
+                            </li>
+                            <li class="container-navbar-submenu-title" data-category="">
+                                <!-- Нужно чтобы data-category должно быть одинкавым с submenu-categories -->
+                                <span> Фармацевтическая химия</span>
+                                <img src="icons/submenu.svg" alt="" class="navbar-submenu-icon" />
+                            </li>
+                            <li class="container-navbar-submenu-title" data-category="">
+                                <!-- Нужно чтобы data-category должно быть одинкавым с submenu-categories -->
+                                <span> Кожевенная химия</span>
+                                <img src="icons/submenu.svg" alt="" class="navbar-submenu-icon" />
+                            </li>
+                            <li class="container-navbar-submenu-title" data-category="">
+                                <!-- Нужно чтобы data-category должно быть одинкавым с submenu-categories -->
+                                <span> Минеральная удобрения</span>
+                                <img src="icons/submenu.svg" alt="" class="navbar-submenu-icon" />
+                            </li>
+                        </ul>
+                        <ul class="submenu-categories" data-category="Общая химия">
+                            <li class="categories-submenu-title">
+                                <a href="">Сырье для производства водоэмульсии</a>
+                            </li>
+                            <li class="categories-submenu-title">
+                                <a href="">Пигменты для тротуарной плитки и брусчатки</a>
+                            </li>
+                            <li class="categories-submenu-title">
+                                <a href="">Сырье для производства маслянных красок</a>
+                            </li>
+                            <li class="categories-submenu-title">
+                                <a href="">Сырье для клея ПВА</a>
+                            </li>
+                            <li class="categories-submenu-title">
+                                <a href="">Сырье для клея ПВА</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="" class="navbar-link">Сертификаты</a>
+                    <a href="" class="navbar-link">Партнеры</a>
+                    <a href="" class="navbar-link">Шоурум</a>
+                    <a href="" class="navbar-link">Карьера</a>
+                    <a href="" class="navbar-link">Новости</a>
+                    <a href="" class="navbar-link">Контакты</a>
+                </nav>
+                <form action="" method="post" class="form-search">
+                    <input type="text" class="search" placeholder="Поиск" />
+                    <img src="/icons/search.svg" alt="search-icon" class="icon-search" />
+                </form>
+            </div>
+            <div class="form-big-search">
+                <form>
+                    <input type="text" class="search" placeholder="Поиск" />
+                    <img src="/icons/icon-search-close.svg" alt="search-icon" class="icon-search-close" />
+                </form>
+            </div>
+        </menu>
+    </header>
+    <div class="wrapper">
+        <div class="content">
+            <div class="catalog">
+                <nav class="breadcrumbs">
+                    <a href="/">Главная</a>
+                    <span class="separator">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+                        </svg>
+                    </span>
+                    <a href="/news.html">Продукция</a>
+                </nav>
+                <h3>Каталог продукции</h3>
+
+                <div class="card">
+                    <a href="" class="card-item">
+                        <div href="" class="btn-link">
+                            <span>Общая химия</span>
+                            <img src="/icons/vertor-arrow-rigjt.svg" alt=">">
+                        </div>
+                    </a>
+                    <a href="" class="card-item">
+                        <div class="btn-link">
+                            <span>Строительная химия</span>
+                            <img src="/icons/vertor-arrow-rigjt.svg" alt=">">
+                        </div>
+                    </a>
+                    <a href="" class="card-item">
+                        <div class="btn-link">
+                            <span>Бытовая химия и косметика</span>
+                            <img src="/icons/vertor-arrow-rigjt.svg" alt=">">
+                        </div>
+                    </a>
+                    <a href="" class="card-item">
+                        <div class="btn-link">
+                            <span>Полимерная химия</span>
+                            <img src="/icons/vertor-arrow-rigjt.svg" alt=">">
+                        </div>
+                    </a>
+                    <a href="" class="card-item">
+                        <div class="btn-link">
+                            <span>Текстильная химия</span>
+                            <img src="/icons/vertor-arrow-rigjt.svg" alt=">">
+                        </div>
+                    </a>
+                    <a href="" class="card-item">
+                        <div class="btn-link">
+                            <span>Пищевая химия</span>
+                            <img src="/icons/vertor-arrow-rigjt.svg" alt=">">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div id="form" class="container-form">
+                <img src="/img/fon-form.png" alt="" class="fon-form" />
+                <div class="flex-col-start">
+                    <span class="span-block">Возникли вопросы?</span>
+                    <h2 class="title">Форма для связи</h2>
+                    <form action="" method="post" class="form">
+                        <div class="content-form">
+                            <span class="spna-block">Заполните поля</span>
+                            <div class="inputs">
+                                <input type="text" class="input name" placeholder="Имя" />
+                                <input type="tel" id="input-phone" class="input" />
+                                <input type="text" class="input company" placeholder="Компания" />
+                                <textarea name="comment" class="input comment" placeholder="Комментарий"></textarea>
+                            </div>
+                            <a href="" class="btn-form">Оставить заявку</a>
+                            <span class="span-form">Отправляя данную форму, вы соглашаетесь на обработку
+                                персональных данных.</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <footer id="footer" class="container-footer">
+                <div class="flex-col-start">
+                    <div class="flex-start">
+                        <div class="container-nav">
+                            <h4 class="title-nav">Навигация</h4>
+                            <ul class="links-nav">
+                                <li>
+                                    <a href="" class="link-nav">Главная</a>
+                                </li>
+                                <li>
+                                    <a href="" class="link-nav">Компания</a>
+                                </li>
+                                <li>
+                                    <a href="" class="link-nav">Продукция</a>
+                                </li>
+                                <li>
+                                    <a href="" class="link-nav">Сертификаты</a>
+                                </li>
+                                <li>
+                                    <a href="" class="link-nav">Партнеры</a>
+                                </li>
+                                <li>
+                                    <a href="" class="link-nav">Шоурум</a>
+                                </li>
+                                <li>
+                                    <a href="" class="link-nav">Карьера</a>
+                                </li>
+                                <li>
+                                    <a href="" class="link-nav">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="container-catalog">
+                            <h4 class="title-catalog">Каталог</h4>
+                            <ul class="links-catalog">
+                                <li>
+                                    <a href="" class="link-catalog">Общая химия</a>
+                                </li>
+                                <li>
+                                    <a href="" class="link-catalog">Строительная химия
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="link-catalog">Бытовая химия и косметика</a>
+                                </li>
+                                <li>
+                                    <a href="" class="link-catalog">Полимерная химия</a>
+                                </li>
+                                <li>
+                                    <a href="" class="link-catalog">Текстильная химия</a>
+                                </li>
+                                <li>
+                                    <a href="" class="link-catalog">Пыщевая химия</a>
+                                </li>
+                                <li>
+                                    <a href="" class="link-catalog">Фармацевтическая химия</a>
+                                </li>
+                                <li>
+                                    <a href="" class="link-catalog">Кожевенная химия</a>
+                                </li>
+                                <li>
+                                    <a href="" class="link-catalog">Минеральная удобрения</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="container-line">
+                            <h4 class="title-line">Обратная связь</h4>
+                            <ul class="links-line">
+                                <li>
+                                    <a href="mailto:info@meritkimyo.uz" class="link-line mail">info@meritkimyo.uz</a>
+                                </li>
+                                <li class="social-media">
+                                    <a href="">
+                                        <img src="/icons/social-media/header/1.svg" alt="instagram"
+                                            class="i-socmedia" />
+                                    </a>
+                                    <a href="">
+                                        <img src="/icons/social-media/header/2.svg" alt="youtube" class="i-socmedia" />
+                                    </a>
+                                    <a href="">
+                                        <img src="/icons/social-media/header/3.svg" alt="linkedIn" class="i-socmedia" />
+                                    </a>
+                                    <a href="">
+                                        <img src="/icons/social-media/header/4.svg" alt="facebook" class="i-socmedia" />
+                                    </a>
+                                    <a href="">
+                                        <img src="/icons/social-media/header/5.svg" alt="telegram" class="i-socmedia" />
+                                    </a>
+                                </li>
+                                <!-- НЕ УБИРАТЬ -->
+                                <li></li>
+                                <li class="link-line span-list-country">Узбекистан</li>
+                                <li>
+                                    <strong class="link-line">Номер:</strong>
+                                    <a href="tel:+998 (71) 203-00-55" class="link-line span-list-phone">
+                                        +998 (71) 203-00-55</a>
+                                </li>
+                                <li class="link-line">
+                                    <strong class="link-line">Адрес:</strong>
+                                    <span class="span-list-adress">Узбекистан, 100021, г. Ташкент, Шайхонтохурский
+                                        район,
+                                        ул. Фурката, 6A.</span>
+                                </li>
+                                <!-- НЕ УБИРАТЬ -->
+                                <li></li>
+                                <li class="link-line span-list-country">Казахстан</li>
+                                <li>
+                                    <strong class="link-line">Номер:</strong>
+                                    <a href="tel:+7 (727) 335-70-20" class="link-line span-list-phone">
+                                        +7 (727) 335-70-20</a>
+                                    <span class="span-list-phone l">|</span>
+                                    <a href="tel:+7 (771) 171-71-38" class="link-line span-list-phone">
+                                        +7 (771) 171-71-38</a>
+                                </li>
+                                <li>
+                                    <strong class="link-line">Адрес:</strong>
+                                    <span class="span-list-adress">Казахстан, город Алматы, Турксибский район, проспект
+                                        Суюнбая, дом 419</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="container-line">
+                            <ul class="links-line">
+                                <li class="link-line span-list-country">Таджикистан</li>
+                                <li>
+                                    <strong class="link-line">Номер:</strong>
+                                    <a href="tel:+992927777414" class="link-line span-list-phone">
+                                        +992927777414</a>
+                                    <span class="span-list-phone l">|</span>
+                                    <a href="tel:+992927750019" class="link-line span-list-phone">
+                                        +992927750019</a>
+                                </li>
+                                <li class="link-line">
+                                    <strong class="link-line">Адрес:</strong>
+                                    <span class="span-list-adress">Таджикистан г. Бустон, улица Рохи обод 1.
+                                    </span>
+                                </li>
+                                <!-- НЕ УБИРАТЬ -->
+                                <li></li>
+                                <li class="link-line span-list-country">Москва</li>
+                                <li>
+                                    <strong class="link-line">Номер:</strong>
+                                    <a href="tel:+ 7 937 586 88 01" class="link-line span-list-phone">
+                                        + 7 937 586 88 01</a>
+                                    <span class="span-list-phone l">|</span>
+                                    <a href="tel:+7 495 249 30 25" class="link-line span-list-phone">
+                                        +7 495 249 30 25</a>
+                                </li>
+                                <li>
+                                    <strong class="link-line">Адрес:</strong>
+                                    <span class="span-list-adress">РФ, г. Москва, ул. Кулакова дом 20, к. 1/А, офис
+                                        426.</span>
+                                </li>
+                                <!-- НЕ УБИРАТЬ -->
+                                <li></li>
+                                <li class="link-line span-list-country">Турция</li>
+                                <li>
+                                    <strong class="link-line">Номер:</strong>
+                                    <a href="tel:+90 212 954 00 50" class="link-line span-list-phone">
+                                        +90 212 954 00 50</a>
+                                </li>
+                                <li class="link-line">
+                                    <strong class="link-line">Адрес:</strong>
+                                    <span class="span-list-adress">Tekstilkent Caddesi. 12A Koza Plaza B Blok 2.Kat No:
+                                        6
+                                        Esenler / ISTANBUL / TÜRKİYE</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="" class="logo">
+                        <img src="/img/Logo.svg" alt="" class="img-footer-logo" />
+                        <img src="/img/Logo_title.svg" alt="" class="img-footer-logo-title" />
+                    </a>
+                    <div class="bottom-footer">
+                        <span class="title-bottom">OOO «Merit Chemicals» — Поставщик <br />
+                            химического сырья и готовой продукции!
+                        </span>
+                        <a href="" class="center-bottom"><img src="/icons/light-icorp.svg" alt="" />
+                            <span class="title-center-bottom">Разработано iCORP</span>
+                        </a>
+                        <span class="sub-bottom">© 2024 | Все права защищены</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

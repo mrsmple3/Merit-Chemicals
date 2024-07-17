@@ -1,7 +1,7 @@
 @import './main.scss';
 
 .breadcrumbs {
-    margin-top: 210px;
+    margin-top: size(183px);
 
     a {
         color: inherit;
@@ -26,6 +26,9 @@
 
 .news-page {
     @include main-container();
+    padding-bottom: size(150px);
+    font-size: 18px;
+
 
     & h3 {
         font-size: 35px;
@@ -50,7 +53,6 @@
 
     & p {
         color: #DCDCDC;
-        font-size: 18px;
         font-weight: 500;
         line-height: 27.41px;
         margin-bottom: 25px;
@@ -67,8 +69,6 @@
         font-weight: 600;
         line-height: 42px;
         text-align: left;
-        
-        
     }
 }
 
@@ -194,6 +194,7 @@
     grid-template-columns: repeat(4, 1fr);
     display: grid;
     gap: size(25px);
+    padding-bottom: size(150px);
 }
 .news-card {
     background-color: #081A41;
@@ -224,5 +225,150 @@
     & > p.date {
         opacity: .4;
         margin-top: 35px;
+    }
+}
+
+.catalog {
+    @include main-container();
+    padding-bottom: size(150px);
+    h3 {
+        padding-top: 50px;
+        padding-bottom: 55px;
+        font-size: 35px;
+        font-weight: 600;
+        line-height: 42px;
+        text-align: left;
+    }
+    .card {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: size(42px);
+        .card-item {
+            flex: 0 1 30%; /* 33.333% ширины минус отступ */
+            width: size(405px);
+            height: size(144px);
+            border-top-left-radius: size(5px);
+            border-top-right-radius: size(30px);
+            border-bottom-right-radius: size(5px);
+            border-bottom-left-radius: size(5px);
+            overflow: hidden;
+            background: url(/img/card-offer-product-1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-bottom: size(32px);
+            margin-right: 10px;
+            display: flex;
+            align-items: flex-end;
+            &:nth-child(2) {
+                background: url(/img/card-offer-product-2.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            &:nth-child(3) {
+                background: url(/img/card-offer-product-3.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            &:nth-child(4) {
+                background: url(/img/card-offer-product-4.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            &:nth-child(5) {
+                background: url(/img/card-offer-product-5.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            &:nth-child(6) {
+                background: url(/img/card-offer-product-6.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            &:nth-child(3n) {
+                margin-right: 0; /* Убираем отступ у каждого третьего элемента */
+            }
+            .btn-link {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-right: size(24px);
+                padding-left: size(24px);
+                width: 100%;
+                height: size(60px);
+                background: rgba(255, 255, 255, 0.9);
+                border-top-left-radius: size(5px);
+                border-top-right-radius: size(30px);
+                border-bottom-right-radius: size(5px);
+                border-bottom-left-radius: size(5px);
+                span {
+                    color: #041d59;
+                    font-size: size(18px);
+                    font-weight: 500;
+                    line-height: size(21.6px);
+                    word-wrap: break-word;
+                }
+            }
+        }
+    }
+}
+
+
+.contacts {
+    @include main-container();
+    padding-bottom: size(150px);
+    &-columns {
+        display: flex;
+        justify-content: space-between;
+    }
+    h3 {
+        padding-top: 50px;
+        padding-bottom: 55px;
+        font-size: 35px;
+        font-weight: 600;
+        line-height: 42px;
+        text-align: left;
+    }
+    &-card {
+        margin-bottom: 45px;
+        max-width: 429px;
+        padding-right: size(15px);
+        &:last-child {
+            margin-bottom: 0;
+        }
+        p.country {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 21.32px;
+            text-align: left;
+            opacity: .4;
+            margin-bottom: 12px;
+        }
+        p > span {
+            font-size: 17px;
+            font-weight: 700;
+            line-height: 25.88px;
+            text-align: left;
+            
+        }
+        p {
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 25.88px;
+            text-align: left;
+            color: inherit;
+        }
+        p.phone  a {
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 25.88px;
+            text-align: left;
+            color: inherit;
+        }
+        p.phone {
+            margin-bottom: 12px;
+        }
     }
 }
