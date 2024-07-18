@@ -195,12 +195,27 @@
     display: grid;
     gap: size(25px);
     padding-bottom: size(150px);
+    @media (max-width: 1500px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 1000px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 480px) {
+        display: block;
+    }
 }
 .news-card {
     background-color: #081A41;
     border-radius: 15px;
     padding: 15px;
     display: block;
+    @media (max-width: 480px) {
+        margin-bottom: 20px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
     & > h3 {
         color: white;
         font-size: 17px;
@@ -320,6 +335,7 @@
     @include main-container();
     padding-bottom: size(150px);
     &-columns {
+        flex-wrap: wrap;
         display: flex;
         justify-content: space-between;
     }
@@ -333,7 +349,7 @@
     }
     &-card {
         margin-bottom: 45px;
-        max-width: 429px;
+        width: 429px;
         padding-right: size(15px);
         &:last-child {
             margin-bottom: 0;
@@ -369,6 +385,32 @@
         }
         p.phone {
             margin-bottom: 12px;
+        }
+    }
+    &-socials {
+        margin-top: 100px;
+        &-columns {
+            display: flex;
+            justify-content: space-between;
+        }
+        p.name {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 21.32px;
+            text-align: left;
+            opacity: .4;
+            margin-bottom: 18px;
+        }
+        &-column {
+            width: 429px;
+            &:first-child {
+
+            }
+            .mail {
+                color: rgba(255, 255, 255, 0.9);
+                font-weight: 600;
+                word-wrap: break-word;
+            }
         }
     }
 }

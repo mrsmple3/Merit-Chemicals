@@ -2072,12 +2072,35 @@ main.main-block .offer .swiper-pagination .swiper-pagination-bullet-active {
   gap: calc(1.0869565217 * (1vw + 1vh));
   padding-bottom: calc(6.5217391304 * (1vw + 1vh));
 }
+@media (max-width: 1500px) {
+  .news-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 1000px) {
+  .news-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .news-cards {
+    display: block;
+  }
+}
 
 .news-card {
   background-color: #081A41;
   border-radius: 15px;
   padding: 15px;
   display: block;
+}
+@media (max-width: 480px) {
+  .news-card {
+    margin-bottom: 20px;
+  }
+  .news-card:last-child {
+    margin-bottom: 0;
+  }
 }
 .news-card > h3 {
   color: white;
@@ -2211,6 +2234,7 @@ main.main-block .offer .swiper-pagination .swiper-pagination-bullet-active {
   }
 }
 .contacts-columns {
+  flex-wrap: wrap;
   display: flex;
   justify-content: space-between;
 }
@@ -2224,7 +2248,7 @@ main.main-block .offer .swiper-pagination .swiper-pagination-bullet-active {
 }
 .contacts-card {
   margin-bottom: 45px;
-  max-width: 429px;
+  width: 429px;
   padding-right: calc(0.652173913 * (1vw + 1vh));
 }
 .contacts-card:last-child {
@@ -2260,4 +2284,27 @@ main.main-block .offer .swiper-pagination .swiper-pagination-bullet-active {
 }
 .contacts-card p.phone {
   margin-bottom: 12px;
+}
+.contacts-socials {
+  margin-top: 100px;
+}
+.contacts-socials-columns {
+  display: flex;
+  justify-content: space-between;
+}
+.contacts-socials p.name {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21.32px;
+  text-align: left;
+  opacity: 0.4;
+  margin-bottom: 18px;
+}
+.contacts-socials-column {
+  width: 429px;
+}
+.contacts-socials-column .mail {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  word-wrap: break-word;
 }/*# sourceMappingURL=contacts.css.map */
